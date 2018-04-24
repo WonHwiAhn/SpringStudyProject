@@ -28,7 +28,7 @@ public class SearchBoardController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public void listPage(@ModelAttribute("cri") SearchCriteria cri, Model model) throws Exception{
 		logger.info(cri.toString());
-		
+		System.out.println("cri ==> " + cri);
 		//18.02.04 p.332에 의한 주석 
 		//model.addAttribute("list", service.listCriteria(cri));
 		model.addAttribute("list", service.listSearchCriteria(cri));

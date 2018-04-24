@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="handlebars-v4.0.11.js"></script>
+	
+	<div id="displayDiv">
+	
+	</div>
+	
+	<script>
+		var source = "<h1><p>{{name}}</p> <p>{{userid}}</p> <p>{{addr}}</p></h1>";
+		var template = Handlebars.compile(source);
+		var data = {name:"홍길동", userid:"user00", addr:"조선 한양"};
+		
+		$("#displayDiv").html(template(data));
+		
+	</script>
+</body>
+</html>
